@@ -1,7 +1,12 @@
 ---
 layout: page
 title: LIFT Pilot - System Documentation
+menus: [downloads, services]
+headerimage: "/images/header/services_header.jpg"
 ---
+<a href="{{ site.baseurl }}/client/lift">Back to documents</a>
+
+# LIFT Pilot - System Documentation
 
 ## Creating an Appointment
 **YOU SHOULD ASK IF THE MEMBER HAS A CELL PHONE AND IS OK WITH RECEIVING TEXT REMINDERS ABOUT THEIR APPOINTMENT. IF THEY SAY NO, STOP.**

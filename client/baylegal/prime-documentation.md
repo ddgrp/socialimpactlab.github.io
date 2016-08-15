@@ -1,11 +1,18 @@
 ---
 layout: page
 title: BayLegal (2015) Documentation
+menus: [downloads, services]
+headerimage: "/images/header/services_header.jpg"
 ---
-### Activating SMS messages
+
+<a href="{{ site.baseurl }}/client/baylegal">Back to documents</a>
+
+# Prime (Back End) Documentation
+
+## Activating SMS messages
 SMS messages are activated automatically via Prime. The FrontlineSMS system provides alternate ways of automating messages, which can be configured via the FrontlineSMS documentation. This documentation will cover the systems developed for the 2015 TIG project.
 
-### Prime Integration
+## Prime Integration
 We have built an integration that allows SMS-based appointment reminders and surveys to be dispatched directly from Prime.
 
 The core of this integration is a public function, callFrontline()
@@ -25,10 +32,10 @@ This function takes the following arguments, in this order:
 
 You must pass all arguments to the function whenever it is called. To not include an argument, pass it as a blank string: "".
 
-### Connecting Prime to FrontlineCloud
+## Connecting Prime to FrontlineCloud
 The callFrontline() function in Prime is hardcoded with the URL and FrontlineCloud API key. If at any point you need to provision a new API key
 
-#### API Payload in FrontlineCloud
+### API Payload in FrontlineCloud
 FrontlineCloud accepts incoming requests in JSON. It has two required fields: apiKey and payload. The variables in the above function are passed in via payload, which accepts arbitrary keys and values.
 
 ```
@@ -58,7 +65,7 @@ office: name of office
 problem: [optional problem code]
 ```
 
-### Initial reminder
+## Initial reminder
 Immediately upon activating the appointment reminder, the client will receive the following SMS messages:
 
 >Appointment confirmed for [Appointment Date] at [Appointment Time] at our [Office Name] office.
@@ -69,13 +76,13 @@ Immediately upon activating the appointment reminder, the client will receive th
 
 >Text REMIND to get this information again.
 
-### Reminder Loops
+## Reminder Loops
 One business day before the scheduled appointment, the client will receive another reminder, with the same content as above.
 
-### Subsequent Appointments
+## Subsequent Appointments
 A client can only have one appointment at a time. So, if an appointment is rescheduled, a client will receive a new confirmation, and a reminder one business day prior to the **new** appointment only.
 
-### Office Data
+## Office Data
 Appointments are required to have offices. New offices can be created in userData, with keys named in the format "[Office Name] Address" (e.g. "Oakland Address"). The "office" string passed to callFrontline() must match the office prefix in the userData--strings are case sensitive.
 ![office]({{site.baseurl}}/images/baylegal/office-addresses.png)
 

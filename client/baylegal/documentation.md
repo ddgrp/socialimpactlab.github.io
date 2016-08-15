@@ -1,8 +1,15 @@
 ---
 layout: page
-title: BayLegal (2015) Documentation - Legal Advice Line
+title: BayLegal (2015) Documentation
+menus: [downloads, services]
+headerimage: "/images/header/services_header.jpg"
 ---
-### What is it?
+
+<a href="{{ site.baseurl }}/client/baylegal">Back to documents</a>
+
+# BayLegal (2015) - Legal Advice Line Documentation
+
+## What is it?
 As part of a TIG project, we have developed an integration from BayLegal's case management system ("Prime") to FrontlineCloud. This integration enables BayLegal staff to send SMS-based appointment reminders and closing surveys.
 
 ## Appointment Reminders
@@ -19,7 +26,7 @@ You'll need to fill in the rest of the fields, including an optional extra note.
 Hit "Send SMS Reminder" when you're done. You'll get an alert that says "success", which indicates that FrontlineCloud has received the request.
 
 
-### Initial reminder
+## Initial reminder
 Within a minute or so of activating the appointment reminder (the messages are spaced out by a few seconds to ensure they arrive in the correct order), the client will receive the following SMS messages:
 
 >Appointment confirmed for [Appointment Date] at [Appointment Time] at our [Office Name] office.
@@ -32,16 +39,16 @@ Within a minute or so of activating the appointment reminder (the messages are s
 
 >[Extra Reminder Note, if applicable]
 
-### Reminder Loops
+## Reminder Loops
 One business day before the scheduled appointment, the client will receive another reminder, with the same content as above.
 
-### Subsequent Appointments
+## Subsequent Appointments
 A client can only have one appointment at a time. So, if an appointment is rescheduled, a client will receive a new confirmation, and a reminder one business day prior to the **new** appointment only.
 
 ## Surveys
 Your FrontlineCloud customization allows you to send surveys to clients. A survey is a short SMS exchange of yes/no or multiple-choice questions&mdash;usually three to five.
 
-### Closing Survey
+## Closing Survey
 To send a closing survey, navigate to the "Intake Page 3" tab on the Client form, and hit "Send Closing Survey". Make sure that you have a mobile number listed for your client, and that the number has been marked safe.
 
 ![SMS](../images/baylegal_smssurvey1.jpg)

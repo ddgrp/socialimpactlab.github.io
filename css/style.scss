@@ -108,6 +108,14 @@ h2 {
     padding-bottom: 10px;
 }
 
+h3 {
+    @extend %opensans;
+    font-size: 1.3em;
+    font-weight: 700;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
 p {
     font-size: 1em;
 }
@@ -440,6 +448,10 @@ hr {
         border-color: $simlab-primary-grey -moz-use-text-color $simlab-primary-grey;
         border-top: 2px solid $simlab-primary-grey;
     }
+    &.magenta {
+        border-color: $simlab-primary-magenta -moz-use-text-color $simlab-primary-magenta;
+        border-top: 2px solid $simlab-primary-magenta;
+    }
 }
 
 
@@ -764,8 +776,9 @@ hr {
     margin-top: -5px;
     margin-left: -5px;
     > li {
-        padding: 3px 15px 7px 15px;
         font-size: .9em;
+        margin-bottom: 7px;
+        padding: 3px 15px 7px 15px;
         &.last {
           border-right: none;
         }
@@ -829,8 +842,7 @@ hr {
     margin: 0 0 0 10px;
     padding: 6px 0 0 8px;
 }
-.team-container {
-}
+
 .team-card {
     @include phone {
         min-height:185px;
@@ -848,7 +860,7 @@ hr {
         padding-bottom: 0;
     }
     h3{
-        adding: 0;
+        padding: 0;
         margin-top: -10px;
     }
 }
@@ -938,4 +950,36 @@ footer {
 }
 .prev-item {
   margin-left: -33px;
+}
+
+.highlight {
+  padding: 15px 20px;
+  &.magenta {
+    background: $simlab-primary-magenta;
+    color: white;
+  }
+  &.grey {
+    border-bottom: 1px solid $simlab-secondary-grey;
+    border-top: 1px solid $simlab-secondary-grey;
+    color: $simlab-primary-magenta;
+  }
+  &.magenta-border {
+    background: $simlab-primary-grey;
+    border-top: 5px solid $simlab-primary-magenta;
+  }
+}
+
+.underlined {
+  border-bottom: 1px solid $simlab-primary-grey;
+  padding-bottom: 7px;
+  &.bold {
+    border-bottom: 2px solid $simlab-primary-grey;
+    &.dark {
+      border-color: $simlab-primary-black;
+    }
+    &.magenta {
+      color: $simlab-primary-black;
+      border-color: $simlab-primary-magenta;
+    }
+  }
 }
