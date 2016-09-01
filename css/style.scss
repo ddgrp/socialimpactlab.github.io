@@ -441,6 +441,10 @@ hr {
         border-color: $simlab-primary-grey -moz-use-text-color $simlab-primary-grey;
         border-top: 2px solid $simlab-primary-grey;
     }
+    &.magenta {
+        border-color: $simlab-primary-magenta -moz-use-text-color $simlab-primary-magenta;
+        border-top: 2px solid $simlab-primary-magenta;
+    }
 }
 
 
@@ -939,4 +943,19 @@ footer {
 }
 .prev-item {
   margin-left: -33px;
+}
+
+.highlight {
+  padding: 15px;
+  &.magenta {
+    background: $simlab-primary-magenta;
+    color: white;
+  }
+  &.grey {
+    background: $simlab-secondary-grey;
+  }
+  &.magenta-border {
+    background: $simlab-primary-grey;
+    border-top: 4px solid $simlab-primary-magenta;
+  }
 }
