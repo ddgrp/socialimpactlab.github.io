@@ -952,7 +952,9 @@ footer {
     color: white;
   }
   &.grey {
-    background: $simlab-secondary-grey;
+    border-bottom: 1px solid $simlab-secondary-grey;
+    border-top: 1px solid $simlab-secondary-grey;
+    color: $simlab-primary-magenta;
   }
   &.magenta-border {
     background: $simlab-primary-grey;
